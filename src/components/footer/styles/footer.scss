@@ -1,0 +1,32 @@
+$footer_color:#fff;
+
+.footer-items{
+  width: 100%;
+  padding:20px 15px 20px 15px;
+  margin-top:500px;  
+  background: $footer_color;
+  @media (max-width:816px){
+    margin-top:810px; 
+  }
+    .footer-menu{       
+    .footer-menu-link1, .footer-menu-link2, .footer-menu-link3, .footer-menu-link4, .footer-menu-link5{
+        cursor: pointer;   
+    }
+    .footer-menu-sublink{
+      &:hover{
+        opacity:.8;
+      }
+    }
+    .footer-header{
+     color:#000;
+     font-weight:600;
+    }
+    }
+}
+
+.copyright {
+    background: whitesmoke;
+    color: black;
+     display:flex;
+     justify-content:center;
+}

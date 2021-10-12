@@ -1,0 +1,142 @@
+$button_color:#F54748;
+$logo-green:#81BB40;
+
+.center-nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  color: black;
+  height: 80px;
+  z-index: 108;
+  width: 100%;
+  box-sizing:border-box;
+  position:sticky;
+  z-index:400;
+  top:0px;
+.logo img {
+  height: 60px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.centernav-menu-left{
+  width:67%;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  @media (max-width:1126px){
+    justify-content:flex-start;
+  }
+  .menu-button button{
+    font-size: 25px;
+    padding: 12px 1px;
+    background: none;
+    color: #000;
+    cursor: pointer;
+    margin-top: 3px;
+    border: none;
+    outline: none;
+    @media (max-width:1126px){
+      margin-left:40px;
+    }
+  }
+  
+  .search-container{
+    @media (max-width:1262px){
+      display:none
+    }
+    .centernav-searchInput {  
+      width: 600px;
+      height: 40px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      color: #4e4b4b;
+      border: 2px solid $button_color;   
+       outline: none;
+      
+    }
+    .searchicon-section{
+      background-color: $button_color;
+      width: 95px;
+      padding:9px 10px 9.3px 5px;
+      border-bottom-right-radius: 50px;
+      border-top-right-radius: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+.centernav-menu-right{
+  width:30%;
+  display:flex;
+  justify-content: flex-end;
+  .header-icon {
+    font-size: 30px;
+    color: #000000;
+    cursor: pointer;
+    margin-top:35px;
+  } 
+}
+
+.cart-container{
+  position:relative;
+  margin-left:50px;
+  .amount {
+    vertical-align: top;
+    position: absolute;
+    font-size: 15px;
+    cursor: pointer;
+    top:20px;
+    left:-20px;
+  }
+  .count-product {
+    vertical-align: top;
+    position: absolute;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #f15a22;
+    width: 26px;
+    text-align: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #ffffff;
+    top: 70px;
+  } 
+}
+
+.cart-icon{
+  height: 100px;
+  cursor: pointer;
+  font-size:40px;
+}
+.carticon {
+  display: none;
+  button{
+    font-size: 25px;
+    padding: 12px 1px;
+    background: none;
+    color: #000;
+    cursor: pointer;
+    justify-content: left;
+    border: none;
+    outline: none;
+  }
+}
+
+.center-buttons-green{
+  background-color: $logo-green;
+  border-radius:4px;
+  &:hover{
+    background-color: $logo-green;
+    opacity:0.9;
+    color:#fff;
+  }
+}
+ .nav-link{
+      text-decoration: none;
+      color:#fff;
+      &:hover{
+        color:#fff;
+      }
+    }
+}

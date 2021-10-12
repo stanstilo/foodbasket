@@ -1,0 +1,366 @@
+// constant variables
+$input_border: 0.1rem #dddddd solid;
+
+// border radius
+$border-top: 3px solid#dddd;
+$check-border-top: 3px solid;
+$border-radius: 20px;
+
+// colors
+$black_color: black;
+$smoke_white: #efecec;
+$orange_color: #f15a22;
+
+// text
+$text-align: center;
+@mixin border-radius {
+    border-bottom-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+// form mixins
+@mixin usernames {
+    display: flex;
+    width: 970px;
+    float: start $text-align;
+    padding-bottom: 5px;
+  }
+  @mixin first-input {
+    margin-top: 5px;
+    width: 407px;
+    height: 44px;
+    outline: none;
+    border: $input_border;
+    height: 40px;
+    padding-left: 16px;
+    font-size: 15px;
+  }
+  @mixin last-input {
+    margin: 5px 0 0 42px;
+    width: 407px;
+    height: 44px;
+    outline: none;
+    border: $input_border;
+    height: 40px;
+    padding-left: 16px;
+    font-size: 15px;
+  }
+  @mixin addresses {
+    height: 73px;
+    margin: 15px 0 24px 0;
+    width: 888px;
+  }
+  @mixin address-input {
+    margin-top: 5px;
+    width: 877px;
+    height: 44px;
+    outline: none;
+    border: $input_border;
+    padding-left: 16px;
+    font-size: 15px;
+  }
+  @mixin labels {
+    margin: 0 0 3px 5px;
+    padding-bottom: 5px;
+  }
+  
+  @mixin select-item {
+    width: 300px;
+    height: 44px;
+    outline: none;
+    border: $input_border;
+    padding-left: 16px;
+    font-size: 15px;
+  }
+  
+  // next and previous buttons
+  @mixin btn {
+    display: flex;
+    height: 46px;
+  }
+  @mixin bck {
+    height: 46px;
+    min-height: auto;
+    width: 139px;
+    min-width: auto;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: $input_border;
+    &:hover {
+      background-color: $black_color;
+      color: white;
+    }
+  }
+  @mixin prev {
+    height: 46px;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: $input_border;
+    &:hover {
+      background-color: $black_color;
+      color: white;
+    }
+  }
+  @mixin next {
+    height: 46px;
+    min-height: auto;
+    width: 92px;
+    min-width: auto;
+    outline: none;
+    margin-left: 680px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: $input_border;
+    &:hover {
+      background-color: $black_color;
+      color: white;
+    }
+  }
+  
+.breadcrumbs{
+    display: flex;
+    margin-left: 126px;
+}
+h2{
+    font-size: 45px;
+    color: #F15A22;
+}
+h3{
+    justify-content: center;
+    text-align: center;
+    font-size: xx-large;
+}
+.account{
+    display: flex;
+    width: 100%;
+}
+.account-links {
+    padding-left: 6.2rem;
+    width: 17rem;
+    float: left;
+}
+.account-link ul{
+    list-style-type: none;
+}
+.account-link li{
+   
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: .1rem rgb(211, 209, 209) solid;
+    margin-left: -2.1rem;
+}
+.dashbord-view{
+    margin-top: 7rem;
+    margin-left: 35px;
+    width: 70%;
+}
+.dashbord-view input{
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+}
+.dashbord-view input:focus{
+    border: 1px#66afe9 solid;
+}
+
+/* orders viewpage */
+.not-active{
+    background-color:#F15A22;
+    color: white;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-left: 9px solid #a14b2e;
+} 
+.not-active p{
+    padding-left: 15px;
+}
+.not-active button{
+    background: inherit;
+    color: white;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    padding-right: 15px;
+    border-left: .1rem rgb(216, 210, 210) solid;
+}
+
+/* 'add-payment-method' */
+
+.add-payment-method button{
+    margin-top: 2rem;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: none;
+    height: 52.4px;
+    width: 202px;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
+}
+.add-payment-method button:hover{
+    background-color: #333e48;
+    color: white;
+}
+
+// address heading
+.addresses{
+    display: flex;
+    flex: 1;
+    justify-content:space-evenly;
+    width: 90%;
+
+
+.address-billing {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing:-0.14px;
+    line-height: 40px;
+    color: #333e48;
+    border-bottom: 1px solid rgb(34, 26, 23)d;
+    display: block;
+    width: 60%;
+}
+.address-shipping {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing:-0.14px;
+    line-height: 40px;
+    color: #333e48;
+    border-bottom: 1px solid rgb(34, 26, 23)d;
+    display: block;
+    padding:0 15px 0 15px;
+    width: 60%;
+  
+}
+}
+
+  // Billing form container
+  .billing-form {
+    height: 700px;
+    width: 1000px;
+    max-width: 1000px;
+    padding: 0 15px 0 25px;
+    box-sizing: border-box;
+    .form-body {
+      display: block;
+      margin: -50px 5px 0 1px;
+      width: 900px;
+      max-width: 900px;
+      .user-names {
+        @include usernames;
+        .input-first {
+          @include first-input;
+          @include border-radius;
+        }
+        .input-last {
+          @include last-input;
+          @include border-radius;
+        }
+      }
+      .address {
+        @include addresses;
+        .label {
+          @include labels;
+        }
+        .input-address {
+          @include address-input;
+          @include border-radius;
+        }
+      }
+
+      .city-zip {
+        display: block;
+        .label {
+          @include labels;
+        }
+        .inputs {
+          display: flex;
+          .city {
+            @include first-input;
+            @include border-radius;
+          }
+          .zip {
+            @include last-input;
+            @include border-radius;
+          }
+        }
+      }
+      .state-label {
+        margin: 10px 0 3px 5px;
+        padding-bottom: 5px;
+      }
+      .select-state {
+        @include select-item;
+        @include border-radius;
+      }
+      .phone-email {
+        display: flex;
+        width: 970px;
+        float: start $text-align;
+        padding-bottom: 5px;
+        margin-top: 10px;
+        .phone-input {
+          margin-top: 5px;
+          width: 407px;
+          height: 40px;
+          outline: none;
+          border: $input_border;
+          padding-left: 16px;
+          font-size: 15px;
+          @include border-radius;
+        }
+        .email-input {
+          margin: 5px 0 0 42px;
+          width: 407px;
+          height: 40px;
+          outline: none;
+          border: $input_border;
+          padding-left: 16px;
+          font-size: 15px;
+          @include border-radius;
+        }
+      }
+      .store-title {
+        margin: 10px 0 3px 5px;
+        padding-bottom: 5px;
+      }
+      .store-close select {
+        width: 300px;
+        height: 44px;
+        outline: none;
+        border: $input_border;
+        padding-left: 16px;
+        font-size: 15px;
+        @include border-radius;
+      }
+    }
+    .next-prev {
+      @include btn;
+      width: 895px;
+      margin: 98px 5px 0 15px;
+      .back-to-cart-btn {
+        @include bck;
+      }
+      .next-submit-btn {
+        @include next;
+        margin-left: 680px;
+      }
+    }
+  }

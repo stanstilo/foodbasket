@@ -1,0 +1,912 @@
+// constant variables
+$input_border: 0.1rem #dddddd solid;
+
+// border radius
+$border-top: 3px solid#dddd;
+$check-border-top: 3px solid;
+$border-radius: 20px;
+
+// colors
+$black_color: black;
+$smoke_white: #efecec;
+$orange_color: #f15a22;
+
+// text
+$text-align: center;
+
+@mixin border-radius {
+  border-bottom-right-radius: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+// form mixins
+@mixin usernames {
+  display: flex;
+  width: 970px;
+  float: start $text-align;
+  padding-bottom: 5px;
+}
+@mixin first-input {
+  margin-top: 5px;
+  width: 407px;
+  height: 44px;
+  outline: none;
+  border: $input_border;
+  height: 40px;
+  padding-left: 16px;
+  font-size: 15px;
+}
+@mixin last-input {
+  margin: 5px 0 0 42px;
+  width: 407px;
+  height: 44px;
+  outline: none;
+  border: $input_border;
+  height: 40px;
+  padding-left: 16px;
+  font-size: 15px;
+}
+@mixin addresses {
+  height: 73px;
+  margin: 15px 0 24px 0;
+  width: 888px;
+}
+@mixin address-input {
+  margin-top: 5px;
+  width: 877px;
+  height: 44px;
+  outline: none;
+  border: $input_border;
+  padding-left: 16px;
+  font-size: 15px;
+}
+@mixin labels {
+  margin: 0 0 3px 5px;
+  padding-bottom: 5px;
+}
+
+@mixin select-item {
+  width: 300px;
+  height: 44px;
+  outline: none;
+  border: $input_border;
+  padding-left: 16px;
+  font-size: 15px;
+}
+
+// next and previous buttons
+@mixin btn {
+  display: flex;
+  height: 46px;
+}
+@mixin bck {
+  height: 46px;
+  min-height: auto;
+  width: 139px;
+  min-width: auto;
+  outline: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border: $input_border;
+  &:hover {
+    background-color: $black_color;
+    color: white;
+  }
+}
+@mixin prev {
+  height: 46px;
+  outline: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border: $input_border;
+  &:hover {
+    background-color: $black_color;
+    color: white;
+  }
+}
+@mixin next {
+  height: 46px;
+  min-height: auto;
+  width: 92px;
+  min-width: auto;
+  outline: none;
+  margin-left: 680px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  border: $input_border;
+  &:hover {
+    background-color: $black_color;
+    color: white;
+  }
+}
+
+
+// next and previous buttons
+.checkout-page-container {
+  height: 1100px;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 160px 0 160px;
+  justify-content: center;
+  padding: 0 15px 0 15px;
+  .checkout-title {
+    font-weight: 600;
+    font-size: 40px;
+    height: 44px;
+    width: 970px;
+    text-align: center;
+    margin-left: 105px;
+  }
+
+  
+  .step-container {
+    height: 700px;
+    width: 1000px;
+    max-width: 1000px;
+    margin: 30px 0 0 -20px;
+    padding: 0 15px 0 25px;
+    box-sizing: border-box;
+    .checkout-scroll {
+      display: flex;
+      .currentUser {
+        display: flex;
+        @mixin inflow {
+          width: 120px;
+        }
+        // inflow scroll
+        .inflow-scroll-active {
+        
+          border-top: $check-border-top $orange_color;
+        }
+        .inflow-scroll {
+          @include inflow;
+          border-top: $border-top;
+        }
+
+        // scrolls
+        @mixin scrolls {
+          width: 120px;
+          margin-left: 20px;
+        }
+
+        .scroll-login-active {
+          @include scrolls;
+          border-top: $check-border-top $orange_color;
+          .login {
+            margin: 0 0 0 -40px;
+            color: #464646;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+
+        .scroll-1-active {
+          @include scrolls;
+          border-top: $check-border-top $orange_color;
+          .billing-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .billing {
+            margin: 0 0 0 -40px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+        .scroll-1 {
+          @include scrolls;
+          border-top: $border-top;
+          .billing-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .billing {
+            margin: 0 0 0 -40px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+
+        .scroll-2-active {
+          @include scrolls;
+          border-top: $check-border-top $orange_color;
+          margin-left: 32px;
+          .shipping-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .shpping {
+            margin: 0 0 0 -50px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+        .scroll-2 {
+          @include scrolls;
+          border-top: $border-top;
+          margin-left: 32px;
+          .shipping-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .shipping {
+            margin: 0 0 0 -50px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+
+        .scroll-3-active {
+          @include scrolls;
+          border-top: $check-border-top $orange_color;
+          margin-left: 32px;
+          .order-payment-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .order-payment {
+            margin: 0 0 0 -70px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+        .scroll-3 {
+          @include scrolls;
+          border-top: $border-top;
+          margin-left: 32px;
+          .order-payment-active {
+            margin: 0 0 0 -40px;
+            color: #000000;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+          .order-payment {
+            margin: 0 0 0 -70px;
+            color: #818181;
+            font-size: 15px;
+            font-family: "Open Sans";
+          }
+        }
+
+        //  link scroll
+        @mixin link-scrolls {
+          width: 120px;
+        }
+        .link-scroll-login-active {
+          @include link-scrolls;
+          border-top: $check-border-top $orange_color;
+        }
+        .link-scroll-login {
+          @include link-scrolls;
+          border-top: $border-top;
+          margin-right: 12px;
+        }
+        .link-scroll-1-active {
+          @include link-scrolls;
+          border-top: $check-border-top $orange_color;
+        }
+        .link-scroll-1 {
+          @include link-scrolls;
+          border-top: $border-top;
+        }
+
+        .link-scroll-2-active {
+          @include link-scrolls;
+          border-top: $check-border-top $orange_color;
+        }
+        .link-scroll-2 {
+          @include link-scrolls;
+          border-top: $border-top;
+        }
+        // scroll writup
+        @mixin writeup {
+          margin-top: -20px;
+          width: 30px;
+          height: 30px;
+          text-align: $text-align;
+          border-radius: 50%;
+        }
+        .scroll-login-writeup-active {
+          @include writeup;
+          margin-left: -35px;
+          border: $check-border-top $orange_color;
+        }
+        .scroll-1-writeup-active {
+          @include writeup;
+          margin-left: -35px;
+          border: $check-border-top $orange_color;
+        }
+        .scroll-1-writeup {
+          @include writeup;
+          margin-left: -35px;
+          border: $border-top;
+        }
+
+        .scroll-2-writeup-active {
+          @include writeup;
+          margin-left: -35px;
+          border: $check-border-top $orange_color;
+        }
+        .scroll-2-writeup {
+          @include writeup;
+          margin-left: -35px;
+          border: $border-top;
+        }
+
+        .scroll-3-writeup-active {
+          @include writeup;
+          margin-left: -35px;
+          border: $check-border-top $orange_color;
+        }
+        .scroll-3-writeup {
+          @include writeup;
+          margin-left: -35px;
+          border: $border-top;
+        }
+      }
+    }
+    // Billing form container
+    .checkout-billing-form {
+      height: 700px;
+      width: 1000px;
+      max-width: 1000px;
+      margin: 30px 0 0 60px;
+      padding: 0 15px 0 25px;
+      box-sizing: border-box;
+      .form-body {
+        display: block;
+        margin: 10px 5px 0 15px;
+        width: 900px;
+        max-width: 900px;
+        .checkout-billing-header {
+          display: flex;
+          font-size: 25px;
+          color: #333e48;
+          font-weight: 600;
+          .billing-header {
+            border-bottom: $check-border-top $orange_color;
+            text-decoration: none solid rgb(51, 62, 72);
+          }
+        }
+        .user-names {
+          @include usernames;
+          .input-first {
+            @include first-input;
+            @include border-radius;
+          }
+          .input-last {
+            @include last-input;
+            @include border-radius;
+          }
+        }
+        .address {
+          @include addresses;
+          .label {
+            @include labels;
+          }
+          .input-address {
+            @include address-input;
+            @include border-radius;
+          }
+        }
+
+        .city-zip {
+          display: block;
+          .label {
+            @include labels;
+          }
+          .inputs {
+            display: flex;
+            .city {
+              @include first-input;
+              @include border-radius;
+            }
+            .zip {
+              @include last-input;
+              @include border-radius;
+            }
+          }
+        }
+        .state-label {
+          margin: 10px 0 3px 5px;
+          padding-bottom: 5px;
+        }
+        .select-state {
+          @include select-item;
+          @include border-radius;
+        }
+        .phone-email {
+          display: flex;
+          width: 970px;
+          float: start $text-align;
+          padding-bottom: 5px;
+          margin-top: 10px;
+          .phone-input {
+            margin-top: 5px;
+            width: 407px;
+            height: 40px;
+            outline: none;
+            border: $input_border;
+            padding-left: 16px;
+            font-size: 15px;
+            @include border-radius;
+          }
+          .email-input {
+            margin: 5px 0 0 42px;
+            width: 407px;
+            height: 40px;
+            outline: none;
+            border: $input_border;
+            padding-left: 16px;
+            font-size: 15px;
+            @include border-radius;
+          }
+        }
+        .store-title {
+          margin: 10px 0 3px 5px;
+          padding-bottom: 5px;
+        }
+        .store-close select {
+          width: 300px;
+          height: 44px;
+          outline: none;
+          border: $input_border;
+          padding-left: 16px;
+          font-size: 15px;
+          @include border-radius;
+        }
+      }
+      .next-prev {
+        @include btn;
+        width: 895px;
+        margin: 98px 5px 0 15px;
+        .back-to-cart-btn {
+          @include bck;
+        }
+        .next-submit-btn {
+          @include next;
+          margin-left: 680px;
+        }
+      }
+    }
+
+    // shipping form
+    .checkout-shipping-form {
+      height: 800px;
+      width: 1000px;
+      max-width: 1000px;
+      margin: 30px 0 0 60px;
+      padding: 0 15px 0 25px;
+      box-sizing: border-box;
+      .form-body {
+        display: block;
+        margin: 10px 5px 0 15px;
+        width: 900px;
+        height: 750px;
+        max-width: 900px;
+        .checkout-shipping-header {
+          display: flex;
+          font-size: 25px;
+          color: #333e48;
+          font-weight: 600;
+          .shipping-header {
+            border-bottom: $check-border-top $orange_color;
+            text-decoration: none solid rgb(51, 62, 72);
+          }
+        }
+        .shipping-show{
+          display:flex;
+          .shipping-msg{
+            margin-left: 5px;
+          }
+        }
+        .user-names {
+          @include usernames;
+          .input-first {
+            @include first-input;
+            @include border-radius;
+          }
+          .input-last {
+            @include last-input;
+            @include border-radius;
+          }
+        }
+        .address {
+          @include addresses;
+          .label {
+            @include labels;
+          }
+          .input-address {
+            @include address-input;
+            @include border-radius;
+          }
+        }
+        .city-zip {
+          display: block;
+          .label {
+            @include labels;
+          }
+          .inputs {
+            display: flex;
+            .city {
+              @include first-input;
+              @include border-radius;
+            }
+            .zip {
+              @include last-input;
+              @include border-radius;
+            }
+          }
+        }
+        .state-label {
+          margin: 10px 0 3px 5px;
+          padding-bottom: 5px;
+        }
+        .select-state {
+          @include select-item;
+          @include border-radius;
+        }
+        .ordernote {
+          height: 140px;
+          outline: none;
+          margin-top: 60px;
+          width: 900px;
+          border: solid 0.8px #66aef9;
+          cursor: text;
+          min-height: 140px;
+          padding: 26px 26px 26px 26px;
+          overflow: auto;
+          box-sizing: border-box;
+          word-wrap: break-word;
+          @include border-radius;
+        }
+      }
+      .next-prev-cart {
+        @include btn;
+        width: 895px;
+        margin: -10px 5px 0 15px;
+        .back-to-cart-btn {
+          @include prev;
+          width: 395px;
+        }
+        .next-prev {
+          display: flex;
+
+          width: 800px;
+          margin-left: 600px;
+          .prev-submit-btn {
+            @include prev;
+            width: 95px;
+          }
+          .next-submit-btn {
+            @include prev;
+            width: 95px;
+          }
+        }
+      }
+    }
+
+    // OrderPreview form
+    .orderpreview {
+      height: 1200px;
+      width: 1000px;
+      max-width: 1000px;
+      margin: -30px 0 0 -20px;
+      padding: 0 15px 0 25px;
+      box-sizing: border-box;
+      .preview {
+        box-sizing: border-box;
+
+        padding: 0 15px 0 95px;
+        .order-header {
+          display: flex;
+          border-bottom: $input_border;
+          width: 730px;
+          font-weight: 490;
+
+          .order-product {
+            margin-top: 100px;
+            color: $black-color;
+            font-size: 25px;
+            font-weight: 600;
+          }
+          .order-subtotal {
+            margin-top: 100px;
+            font-weight: 600;
+            color: $black-color;
+            font-size: 25px;
+            margin-left: 550px;
+          }
+        }
+        .order-details {
+          display: flex;
+          justify-content: space-between;
+          list-style-type: none;
+          overflow: hidden;
+          font-weight: 600;
+          width: 690px;
+          padding-bottom: 10px;
+          border-bottom: $input_border;
+          .order-product-details {
+            margin-left: -30px;
+            display: flex;
+            li p {
+              border: none;
+              background-color: whitesmoke;
+              outline: none;
+            }
+          }
+          .order-subtotal-price li p {
+            color: $black-color;
+            font-size: 20px;
+            margin-right: -85px;
+            font-weight: 490;
+            li p {
+              border: none;
+              background-color: whitesmoke;
+              outline: none;
+            }
+          }
+        }
+        @mixin order-sub {
+          color: $black-color;
+          font-size: 20px;
+          font-weight: 490;
+          justify-items: center;
+        }
+        .order-subtitle {
+          @include order-sub;
+          display: flex;
+          border-bottom: $input_border;
+          justify-content: space-between;
+          list-style: none;
+          width: 690px;
+          .order-subtext {
+            @include order-sub;
+            margin-left: -40px;
+          }
+          .order-subprice {
+            @include order-sub;
+            margin-right: 1px;
+          }
+        }
+
+        .order-shipping {
+          width: 690px;
+          border-bottom: $input_border;
+          .order-input {
+            list-style-type: none;
+            display: block;
+            .order-shipping-title {
+              margin-left: -82px;
+              @include order-sub;
+            }
+            .order-flatrate {
+              display: flex;
+              margin-left: -50px;
+              margin-top: 15px;
+              .order-flatrate-amount {
+                margin-left: 538px;
+                font-size: 20px;
+              }
+            }
+            .order-store {
+              display: flex;
+              margin-left: -50px;
+              margin-top: 25px;
+              .store {
+                margin-top: 2px;
+              }
+            }
+          }
+        }
+
+        .order-total {
+          display: flex;
+          justify-content: space-between;
+          color: $black-color;
+          font-size: 25px;
+          font-weight: 690;
+          width: 730px;
+          border-bottom: $input_border;
+        }
+        .account-submit-button button:hover {
+          background-color: $black-color;
+          color: white;
+        }
+        .order-payment-header {
+          width: 730px;
+          .order-title-payment {
+            border-bottom: 0.1rem solid $orange_color;
+            width: 730px;
+          }
+          .order-payment {
+            width: 730px;
+            margin-top: 20px;
+            padding-top: 20px;
+            font-weight: 400px;
+            border-top: $input_border;
+          }
+          .order-payment-mode {
+            width: 710px;
+            height: 50px;
+            padding: 20px 0 20px 20px;
+            background-color: whitesmoke;
+            margin-top: 20px;
+            font-weight: 400px;
+            border: $input_border;
+          }
+          .order-note {
+            margin-top: 20px;
+            font-weight: 490;
+          }
+          .order-note-color {
+            color: #014c8c;
+            margin-top: -20px;
+            font-weight: bold;
+            margin-left: 305px;
+          }
+        }
+        .order-approval {
+          display: flex;
+          margin-top: 20px;
+          width: 730px;
+          .order-approval-note {
+            margin-top: 1px;
+          }
+          .approval-note {
+            margin-top: -21px;
+            margin-left: 279px;
+            color: #014c8c;
+            font-weight: bold;
+          }
+        }
+        .order-payment-button {
+          width: 530px;
+          margin-left: 95px;
+          padding: 20px 41px 20px 21px;
+          height: 65px;
+          background-color: #f15822;
+          border: 0px outset #f15822;
+          outline: none;
+          font-size: 25px;
+          cursor: pointer;
+          border-top-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+          border-top-right-radius: 50px;
+          color: white;
+          &:hover {
+            background-color: $black-color;
+            color: white;
+          }
+        }
+      }
+      .next-prev-cart {
+        @include btn;
+        width: 895px;
+        margin: 50px 5px 0 15px;
+        .back-to-cart-btn {
+          @include prev;
+          width: 395px;
+        }
+        .next-prev {
+          display: flex;
+
+          width: 800px;
+          margin-left: 600px;
+          .prev-submit-btn {
+            @include prev;
+            width: 95px;
+          }
+          .next-submit-btn {
+            @include prev;
+            width: 95px;
+          }
+        }
+      }
+    }
+
+    // Login Checkout Form
+    .checkout-login-form {
+      height: 700px;
+      width: 1100px;
+      max-width: 1100px;
+      margin: 20px 0 0 30px;
+      padding: 0 15px 0 25px;
+      box-sizing: border-box;
+      .form {
+        display: flex;
+        .checkout-renderfield-layout {
+          width: 1000px;
+          height: 97px;
+          .label {
+            margin: 5px 0 10px 5px;
+          }
+          .checkout-renderfield {
+            width: 470px;
+            height: 44px;
+            .checkout-renderfield-input {
+              width: 470px;
+              height: 44px;
+              @include border-radius;
+              outline: none;
+              border: $input_border;
+              padding: 0 17px 0 17px;
+              background-color: #e8f0fe;
+            }
+            .checkout-renderfield-error{
+              color: #f15a22;
+            }
+          }
+        }
+      }
+      .rem-login {
+        .rem{
+          margin-top: 30px;
+          span{
+            height: auto;
+            width: auto;
+          }
+        }
+        .login-cart {
+          margin-top: 20px;
+          #login {
+            @include border-radius;
+            height: 46px;
+            width: 96px;
+            outline: none;
+            text-align: center;
+            font-size: 14px;
+            background-color: #efecec;
+            color: #333e48;
+            border: 0px outset #efecec;
+            &:hover {
+              background-color: $black_color;
+              color: white;
+            }
+          }
+          #to-cart {
+            @include border-radius;
+            height: 46px;
+            width: 96px;
+            margin-left: 780px;
+            text-align: center;
+            outline: none;
+            font-size: 14px;
+            background-color: #efecec;
+            color: #333e48;
+            border: 0px outset #efecec;
+            &:hover {
+              background-color: $black_color;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

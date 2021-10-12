@@ -1,0 +1,59 @@
+.track-orders{
+    width: 90%;
+    margin-left: 126px;
+    margin-right: 26px;
+}
+.track-order-message{
+    word-wrap: break-word;
+    text-align: center;
+    padding: 20px 10px 20px 180px;
+    width: 65%;
+}
+.track-order-labels{
+    display: flex;
+    float: start center;
+    margin-left: 3rem;
+    margin-bottom: 2px;
+}
+#track-order-email{
+    margin-left: 30rem;
+}
+
+.track-order-input input{
+    width: 40%;
+    height: 40px;
+    padding-left: 16px;
+    margin-left: 50px;
+    margin-top: 5px;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+}
+.track-order-input  input:focus{
+    border: 1px#66afe9 solid;
+}
+.track-order-button button{
+    margin-top: 2rem;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: none;
+    height: 52.4px;
+    width: 150px;
+    padding: 15px 30px 15px 30px;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 20px;
+    margin-right: 7rem;
+}
+.track-order-button button:hover{
+    background-color: #333e48;
+    color: white;
+}

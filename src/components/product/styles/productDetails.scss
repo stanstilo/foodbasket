@@ -1,0 +1,197 @@
+.products-breadcrumbs {
+    display: flex;
+    margin-left: 6.9rem;
+
+}
+.product-menu-item{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+.sidemenu-item {
+    display: block;
+    border: .1rem rgb(228, 226, 226) solid;
+    margin-right:1px;
+    margin-left: 2px;
+    width: 250px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+}
+
+.sidemenu-item .show-catego{
+    border-bottom: .1rem rgb(228, 226, 226) solid;
+    padding-top: 1rem;
+    text-align: center;
+}
+.slug-item p{
+    text-align: center;
+}
+
+.slug{
+    border-bottom: .1rem rgb(228, 226, 226) solid;
+    text-align: center;
+}
+.product-item-details{
+    display: flex;
+}
+.product-item-img{
+    width: 500px;
+    height: 300px;
+    margin-right:30px;
+    margin-left: -12px;
+    transition: transform .2s;
+}
+.product-item-img:hover{
+    transform: scale(1.1);
+}
+.product-item-slug{
+    font-size: 12px;
+}
+.product-item-name{
+   border-bottom: .1rem rgb(228, 226, 226) solid;
+   height: 50px;
+   
+   
+}
+.product-item-properties a{
+    display: block;
+
+}
+.product-item-name{
+    font-size: 18px;
+    font-weight: 700;
+}    
+.product-item-price{
+    font-size: x-large;
+    font-weight: bold;
+}
+.addmore{
+    border: 2px solid rgb(230, 230, 230);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    min-height: 2rem;
+    width: 40%;
+    margin-right:2px ;
+ 
+    
+}
+.more-qty{
+      border: none;
+      width: 40%;
+      min-height: 50%;
+      outline: none;
+      margin-left: .8rem;
+      margin-top: .1rem;
+      margin-bottom: .1rem;
+      padding-right: .1rem;
+}
+.add-plus{
+      width: 15%;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(230, 230, 230);
+      border-radius: 50%;
+      margin-top: .8rem;
+      margin-bottom: .2rem;
+      height: 1.5rem;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      margin-right: .3rem;
+      color: black;
+      font-size: 20px;
+    }
+.sub-minus{
+      width: 15%;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(230, 230, 230);
+      border-radius: 50%;
+      margin-top: .8rem;
+      margin-bottom: .4rem;
+      height: 1.5rem;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      margin-right: 1rem;
+      text-align: center;
+      color: black;
+      font-size: 20px;
+}
+.add-plus:hover{
+      background-color: #000;
+      color: white;
+    }
+.sub-minus:hover{
+      background-color: #000;
+      color: white;
+}
+.product-addtocart{
+    width: 120px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #f7623cf3;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+.review-tab{
+    background-color: #ffffff;
+    display: block;
+    height: 550px;
+    width: 900px;
+    margin-top: -2px;
+    margin-left: 22rem;
+    border-top: .1rem rgb(211, 209, 209) solid;
+    border-left: .1rem rgb(211, 209, 209) solid;
+    border-right: .1rem rgb(211, 209, 209) solid;
+    border-bottom: .1rem rgb(211, 209, 209) solid;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.review-link {
+    margin-left: 45rem;
+    background-color: inherit;
+    border:none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+.review-link.active {
+    background-color: inherit;
+    border-bottom: 3px #f7623cf3 solid;
+    outline: none;
+  }
+.review-stars {
+    justify-content: left;
+    padding-left: 2rem;
+}
+
+.each-reviews{
+    background-color: #f7623cf3;
+    color: white;
+    width: 90%;
+    height: 50px;
+    justify-content: left;
+    margin-left: 2rem;
+    margin-top: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+}

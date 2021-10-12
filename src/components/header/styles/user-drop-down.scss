@@ -1,0 +1,98 @@
+.user_dropdown {
+  width: 222px;
+  height: 169px;
+  padding: 5px 0 5px 0;
+  border-top: 2px solid #f15a22;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: white;
+  position: absolute;
+  top: 130px;
+  right: 100px;
+  z-index: 5;
+  min-width: 200px;
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  word-wrap: break-word;
+  .user-drop-down-menu {
+    width: 170px;
+    height: 170px;
+    .user_menu {
+      list-style: none;
+    }
+  }
+  
+  .user-drop-down-login-signin {
+    width: 200px;
+    height: 139px;
+    padding: 0 21px 0 21px;
+    text-align: center;
+    .signin_qus {
+      font-size: 14px;
+      height: 23px;
+      width: 178px;
+    }
+    .login_user_btn_div {
+      height: 45px;
+      width: 178px;
+      margin-top: -20px;
+      padding: 10px 0 10px 0;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      .drop_btn {
+        align-self: center;
+        justify-self: center;
+        outline: none;
+        cursor: pointer;
+        background-color: #f15a22;
+        border: #f15a22 1px solid;
+        color: #ffffff;
+        height: 25px;
+        width: 70px;
+        border-radius: 8%;
+      }
+      .drop_btn:hover {
+        background-color: #333333;
+        color: #ffffff;
+      }
+    }
+    .register_user_btn_div {
+      height: 45px;
+      width: 178px;
+      // margin-top: -20px;
+      padding: 10px 0 10px 0;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      border-top: 1px solid #dbc8db;
+      .register_user_btn {
+        align-self: center;
+        justify-self: center;
+        margin-top: -5px;
+        font-size: 14px;
+        height: 23px;
+        width: 178px;
+        color: #014c8c;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.sticky .user_dropdown {
+  width: 222px;
+  height: 169px;
+  padding: 5px 0 5px 0;
+  border-top: 2px solid #f15a22;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background-color: white;
+  position: absolute;
+  top: 82px;
+  right: 260px;
+  z-index: 5;
+  min-width: 200px;
+  font-family: "Open Sans";
+  box-sizing: border-box;
+  word-wrap: break-word;
+}

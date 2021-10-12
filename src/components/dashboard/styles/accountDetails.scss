@@ -1,0 +1,48 @@
+.labels{
+    display: flex;
+    float: start center;
+}
+.label{
+    margin-top:2rem;
+}
+#lastname{
+    margin-left: 26rem;
+}
+.account-names-inputs input{
+    width: 40%;
+    height: 40px;
+    padding-left: 16px;
+    margin-top: 5px;
+}
+.account-names-inputs{
+    display: flex;
+    justify-content:space-between;
+    width: 90%;
+}
+.account-user-input input{
+    margin-top: 5px;
+    width: 88%;
+    height: 40px;
+    padding-left: 16px;
+}
+.account-submit-button button{
+    outline: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: .1rem rgb(211, 208, 208) solid;
+    float: right;
+    right: 1;
+    width: 120px;
+    height: 46px;
+    margin-top: 2rem;
+    margin-right: 6rem;
+    cursor: pointer;
+    background-color: #efecec;
+    color: rgb(0, 0, 0);
+}
+.account-submit-button button:hover{
+    background-color: black;
+    color: white;
+}

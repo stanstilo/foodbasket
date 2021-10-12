@@ -1,0 +1,75 @@
+$background-banner:#FEF2E7;
+
+  .each-fadeone {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: $background-banner;
+    height: 300px;
+    justify-content: space-between;
+    & h2 {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #f54748;
+        font-size: 3.5em;
+        @media(max-width:694px){
+            font-size: 2.7em;
+        }
+    }
+}
+
+.each-fadeone-a {
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: $background-banner;
+    height: 300px;
+    & h2 {
+        width: 30%;
+        color: #f54748;
+        font-size:2rem;
+    }   
+    .time-4-food-text{
+        width:50%;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+    .slide2-container{
+        width:50%;
+        .slide2-img {
+            width:100%;
+        }
+    }
+ 
+}
+.each-fadeone img{
+    width: 30%;
+}
+
+
+
+
+/* Make the image responsive */
+/* Style the button and place it in the middle of the container-one/image */
+.slide-btn {
+margin-top:80px; 
+height:50px;
+width:170px;
+color:white;
+background-color :#f54748;
+border-radius:20px;
+outline:none;
+border:none;
+&:hover{
+   opacity:.8;
+}
+}
+  
+
+
+
+

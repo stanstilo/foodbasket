@@ -1,0 +1,61 @@
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #333333; /* Black*/
+    color: #ffffff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+    transition: 0.5s;
+    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    #items {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      color: white;
+    }
+    
+    #items .item {
+      position: relative;
+      cursor: pointer;
+      font-size: 2rem;
+      padding: 8px 8px 8px 32px;
+      -webkit-transition: all 250ms;
+      transition: 0.3s;
+      color: rgb(0, 0, 0);
+      margin-top: 1px;
+      margin-bottom: 5%;
+  
+    } 
+    
+  #items .item:hover {
+      padding: 15px 45px;
+      background-color: #e94d31;
+      color: white;
+    }
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      margin-top: 2rem;
+      color:#333;
+    } 
+  }
+  
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 657px) {
+    .sidenav {padding-top: 15px; width: 100px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+

@@ -1,0 +1,11 @@
+.topnav{
+  background-color: #FFFEFD;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: .1rem rgb(201, 199, 199) solid;
+  font-weight: 450px;
+  @media(max-width:1170px){
+    display:none;
+  }
+}

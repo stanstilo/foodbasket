@@ -1,0 +1,55 @@
+$main_nav_color:#D10C15;
+$secondary_nav_color: #fef2e7;
+$button_color:#DCA832;
+$button_nav_color_secondary:#81BB40;
+
+.nav-menu {
+  background-color: $main_nav_color;
+  color: #fff;
+  display: flex;
+  flex-wrap:wrap;
+  width:100%;
+  // .nav-buttons-container{
+  //   width:55%;
+  // }
+  @media(max-width:1242px){
+    display:none;
+  }
+  .nav-buttons {
+    background-color: $button_color;
+    border-radius:4px;
+    &:hover{
+      background-color: $button_color;
+      opacity:0.9;
+      color:#fff;
+    }
+    }
+    .seperator {
+      border-left: 1px solid #bbb7bb;
+      height: 60px;
+      cursor:pointer;
+    }
+    .nav-buttons-green{
+      background-color: $button_nav_color_secondary;
+      border-radius:4px;
+      &:hover{
+        background-color: $button_nav_color_secondary;
+        opacity:0.9;
+      }
+    }
+    .nav-link{
+      text-decoration: none;
+      color:#fff;
+      &:hover{
+        color:#fff;
+      }
+    }
+ 
+    
+}
+
+
+
+
+
+
