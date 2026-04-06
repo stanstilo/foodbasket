@@ -53,7 +53,7 @@ const FoodCalculatorIndex = () => {
 
   // handle alert
   const handleAlert = ({ type, text }) => {
-+    setAlert({ show: true, type, text });
+    setAlert({ show: true, type, text });
     setTimeout(() => {
       setAlert({ show: false });
     }, 7000);

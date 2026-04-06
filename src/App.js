@@ -17,7 +17,7 @@ const  App = () => {
   return (   
   <div className='app-body'>
     <Provider store={store}>
-      <Router>
+    <Router>
     <PersistGate persistor={persistor}>
     <Switch>
     <MainApp />

@@ -38,10 +38,13 @@
     "shortid": "^2.2.16",
     "swiper": "^6.3.3"
   },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "yarn run build"
   },

@@ -1,7 +1,7 @@
-# Hubmart
+# Shopping
 hubmart clone using react, django, redux, and restApi. exactly the same as www.hubmart.com
 
-# Hubmart clone using react, react-redux, redux-thunk, reselect, redux-persist and django framework(cors, restApi, postgres)
+# This is Hubmart clone using react, react-redux, redux-thunk, reselect, redux-persist and django framework(cors, restApi, postgres)
 
 Todo Component & Function:
 
